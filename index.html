@@ -41,6 +41,7 @@
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a class="btn btn-primary" id="resumeBtn">View My Resume</a>
             </div>
         </div>
     </section>
@@ -67,7 +68,7 @@
                 </div>
                 <div class="about-image fade-in">
                     <div class="profile-img">
-                        <img src="/3.jpg" alt="Aryan Singh">
+                        <img src="/Assets/pfp.jpg" alt="Aryan Singh">
                     </div>
                 </div>
             </div>
@@ -80,9 +81,9 @@
             <h2 class="section-title fade-in">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card fade-in">
-                    <div class="project-image">Project Screenshot</div>
+                    <div class="project-image">Coming Soon</div>
                     <div class="project-content">
-                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <h3 class="project-title">Cricket Analysis</h3>
                         <p class="project-description">A full-stack e-commerce solution with user authentication, payment integration, and admin dashboard.</p>
                         <div class="project-tech">
                             <span class="tech-tag">React</span>
@@ -99,7 +100,7 @@
 
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src=Weather.png alt="project screenshot"></div>
+                        <img src="Assets/Weather.png" alt="project screenshot"></div>
                     <div class="project-content">
                         <h3 class="project-title">Weather Monitor App</h3>
                         <p class="project-description">A responsive web app where users can enter any city name to view real-time temperature and humidity.</p>
@@ -118,7 +119,7 @@
 
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="/Portfolio.png" alt="project screenshot">
+                        <img src="/Assets/Portfolio.png" alt="project screenshot">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Portfolio Website</h3>
@@ -130,8 +131,8 @@
                             <span class="tech-tag">CSS3</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://aryan-port-folio.netlify.app/" class="project-link">Live Demo</a>
-                            <a href="https://github.com/aryan7635/Portfolio-Website.git" class="project-link">GitHub</a>
+                            <a href="https://aryan-port-folio.netlify.app/" target="_blank" class="project-link">Live Demo</a>
+                            <a href="https://github.com/aryan7635/Portfolio-Website.git" target="_blank" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -146,11 +147,12 @@
             <div class="contact-content">
                 <div class="contact-info fade-in">
                     <h3>Let's work together!</h3>
-                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                    <p>I'm always interested in new opportunities and exciting projects. Open to work with anyone in my domains. Whether you have a question or just want to say hi, feel free to reach out!</p>
                     <ul class="contact-details">
                         <li>📧 aryansngh193@gmail.com</li>
                         <li>📱 +91 8881457190</li>
                         <li>📍 Kanpur, Uttar Pradesh, India</li>
+                        <li><a href="#" id="resumeListLink" style="color:inherit;text-decoration:none;">💼 My Resume</a></li>
                     </ul>
                 </div>
                 <form class="contact-form fade-in" action="https://formspree.io/f/mgvzkqab" method="POST">
@@ -180,16 +182,23 @@
     <footer class="footer">
         <div class="container">
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/aryansingh018/" class="social-link" target="_blank"><img src="/lIn.png"></a>
-                <a href="https://github.com/aryan7635" class="social-link" target="_blank"><img src="/git.png"></a>
-                <a href="https://www.instagram.com/_aryansingh_2/" class="social-link" target="_blank"><img src="/insta.png"></a>
-                <a href="https://leetcode.com/u/aryansingh_134/" class="social-link" target="_blank"><img src="/lc.png"></a>
-                <a href="https://www.geeksforgeeks.org/user/aryansngh193/" class="social-link" target="_blank"><img src="/gfg.png"></a>
+                <a href="https://www.linkedin.com/in/aryansingh018/" class="social-link" target="_blank"><img src="/Assets/lIn.png"></a>
+                <a href="https://github.com/aryan7635" class="social-link" target="_blank"><img src="/Assets/git.png"></a>
+                <a href="https://www.instagram.com/_aryansingh_2/" class="social-link" target="_blank"><img src="/Assets/insta.png"></a>
+                <a href="https://leetcode.com/u/aryansingh_134/" class="social-link" target="_blank"><img src="/Assets/lc.png"></a>
+                <a href="https://www.geeksforgeeks.org/user/aryansngh193/" class="social-link" target="_blank"><img src="/Assets/gfg.png"></a>
             </div>
             <p>&copy; 2025 Aryan Singh. All rights reserved.</p>
         </div>
     </footer>
 
+    <div id="resumeOverlay" class="resume-overlay">
+        <div class="resume-modal">
+            <button id="closeResume" class="close-resume">&times;</button>
+            <button id="fullscreenResume" class="fullscreen-resume" title="Full Screen" >⛶</button>
+            <iframe id="resumeFrame" src="/Assets/AryanSingh_Resume.pdf" frameborder="0"></iframe>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

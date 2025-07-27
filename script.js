@@ -56,9 +56,47 @@ document.querySelectorAll('.fade-in').forEach(el => {
 // Form submission (replace with your own form handler)
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    // Add your form submission logic here
-    alert('Message sent! (This is a demo - integrate with your preferred form service)');
+    const form = this;
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Message sent!');
+            form.reset();
+        } else {
+            alert('Something went wrong. Please try again.');
+        }
+    })
+    .catch(() => {
+        alert('Something went wrong. Please try again.');
+    });
 });
+
+document.getElementById('resumeBtn').onclick = function() {
+    document.getElementById('resumeOverlay').classList.add('active');
+};
+document.getElementById('closeResume').onclick = function() {
+    document.getElementById('resumeOverlay').classList.remove('active');
+};
+document.getElementById('fullscreenResume').onclick = function() {
+    var iframe = document.getElementById('resumeFrame');
+    if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+    } else if (iframe.webkitRequestFullscreen) { // Safari
+        iframe.webkitRequestFullscreen();
+    } 
+};
+
+document.getElementById('resumeListLink').onclick = function(e) {
+    e.preventDefault();
+    var resumeBtn = document.getElementById('resumeBtn');
+    setTimeout(function() {
+        resumeBtn.click();
+    }, 600); // Wait for scroll animation before opening
+};
 
 // Add some interactive hover effects
 document.querySelectorAll('.project-card').forEach(card => {
